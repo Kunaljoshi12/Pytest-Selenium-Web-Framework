@@ -1,47 +1,81 @@
-Hybrid Data-Driven Automation Framework
-This repository contains a Hybrid Data-Driven Framework designed for automated web testing using Python and Selenium WebDriver. The framework demonstrates the ability to drive test execution by retrieving data from three distinct sources: MySQL Databases, Excel Spreadsheets, and Manual User Input.
+# Hybrid Data-Driven Automation Framework
 
-🚀 Framework Architecture
-The project is structured to separate data retrieval logic from the main execution controller, ensuring modularity and scalability.
+A modular Python-based automation framework designed for flexible web testing. This project leverages **Selenium WebDriver** to execute test cases using data dynamically retrieved from three different sources: MySQL databases, Excel files, and direct terminal input.
 
-Core Components
-Controller (Input_box.py): Acts as the main entry point, allowing the user to select the data source via a match-case menu.
+## 🚀 Framework Architecture
 
-Database Engine (Database_1.py & .sql): Manages connectivity to MySQL using mysql.connector to fetch test parameters dynamically from a relational database.
+The framework is built with a decoupled architecture, separating data acquisition from test execution logic to ensure modularity and scalability.
 
-Excel Engine (Read_Excel.py): Utilizes openpyxl to parse .xlsx files, locating specific data by column headers (e.g., "ID").
+### Core Components
 
-Manual Engine (User_Input.py): Provides a fallback for ad-hoc testing where data is entered directly via the terminal.
+* **Controller (`Input_box.py`):** The central entry point. It uses a `match-case` menu to route execution based on the user's chosen data source.
+* **Database Engine (`Database_1.py`):** Manages connectivity to MySQL using `mysql-connector-python` to fetch test parameters dynamically.
+* **Excel Engine (`Read_Excel.py`):** Utilizes `openpyxl` to parse `.xlsx` files and map data to specific test cases based on column headers.
+* **Manual Engine (`User_Input.py`):** Provides a fallback module for ad-hoc or exploratory testing via manual terminal input.
 
-🛠️ Technical Stack
-Language: Python
+---
 
-Automation Tool: Selenium WebDriver
+## 🛠️ Technical Stack
 
-Database: MySQL
+| Component | Technology |
+| --- | --- |
+| **Language** | Python 3.x |
+| **Automation** | Selenium WebDriver |
+| **Database** | MySQL |
+| **Libraries** | `mysql-connector-python`, `openpyxl`, `selenium` |
 
-Libraries:
+---
 
-mysql-connector-python (Database connectivity)
+## 📋 Key Features
 
-openpyxl (Excel manipulation)
+* **Multi-Source Data Handling:** Seamlessly switch between SQL, Excel, and console input without modifying the core test scripts.
+* **Dynamic Web Interaction:** Automatically targets [the-internet.herokuapp.com](https://the-internet.herokuapp.com/inputs) to validate numeric input fields.
+* **Robust Error Handling:** Includes `try-except` blocks to manage database connection errors and invalid user inputs.
+* **Synchronization:** Implements implicit waits to ensure reliable element location during page loads.
 
-selenium (Web browser automation)
+---
 
-📋 Features
-Multi-Source Data Handling: Seamlessly switch between SQL, Excel, and console input for test data.
+## ⚙️ Setup and Configuration
 
-Robust Error Handling: Includes try-except blocks to manage database connection errors and invalid user inputs.
+### 1. Database Setup
 
-Dynamic Element Interaction: Automatically launches Chrome and interacts with numeric input fields on a live test site (the-internet.herokuapp.com).
+* Execute the `Data_Base.sql` script in your MySQL environment to create the `data_1` database and the `input` table.
+* Update the connection parameters (host, user, password) in `Database_1.py` to match your local MySQL configuration.
 
-Synchronization: Implements implicit waits to ensure reliable element location during page loads.
+### 2. File Paths
 
-⚙️ Setup and Configuration
-Database Setup: Execute the Data_Base.sql script in your MySQL environment to create the data_1 database and the input table.
+* **Excel:** Ensure your test data is populated in `Data.xlsx` and the file path in `Read_Excel.py` is correct.
+* **Driver:** Update the `Service` path in all Python files to point to your local `chromedriver.exe` location.
 
-Driver Configuration: Update the Service path in all Python files to point to your local chromedriver.exe location.
+### 3. Install Dependencies
 
-Excel Path: Ensure the file path in Read_Excel.py points to your Data.xlsx file.
+Run the following command to install the required libraries:
 
-Database Credentials: Update the connection parameters in Database_1.py (host, user, password) to match your local setup.
+```bash
+pip install selenium mysql-connector-python openpyxl
+
+```
+
+---
+
+## 📂 Project Structure
+
+```text
+Hybrid_Data_Driven_Framework/
+├── Database_1.py       # SQL Data Retrieval Logic
+├── Data_Base.sql       # Database Schema Script
+├── Input_box.py        # Main Controller (Execution Entry)
+├── Read_Excel.py       # Excel Data Retrieval Logic
+├── User_Input.py       # Manual Data Input Logic
+└── Data.xlsx           # Sample Test Data
+
+```
+
+## 🔍 How to Run
+
+1. Navigate to the project directory.
+2. Run the controller script:
+```bash
+python Input_box.py
+
+```
