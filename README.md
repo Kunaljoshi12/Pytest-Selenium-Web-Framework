@@ -8,9 +8,9 @@ Each directory below contains a specialized framework designed for specific auto
 
 | Project Name | Framework Type | Key Technologies | Link |
 | --- | --- | --- | --- |
-| **PyCalc-AutoFrame** | Page Object Model (POM) | Pytest, Selenium, MySQL | [View Project](https://www.google.com/search?q=./PyCalc-AutoFrame) |
-| **Hybrid Data-Driven** | Hybrid Framework | Selenium, Excel, MySQL | [View Project](https://www.google.com/search?q=./Hybrid_Data_Driven_Framework) |
 
+| **Hybrid Data-Driven** | Hybrid Framework | Selenium, Excel, MySQL | [View Project](https://github.com/Kunaljoshi12/Pytest-Selenium-Web-Framework/tree/main/Hybrid_Data_Driven_Framework) |
+| **PyCalc-AutoFrame** | Page Object Model (POM) | Pytest, Selenium, MySQL | [View Project](https://github.com/Kunaljoshi12/Pytest-Selenium-Web-Framework/tree/main/PyCalc-AutoFrame) |
 ---
 
 ## 🏗️ Core Architecture Overview
