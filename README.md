@@ -7,10 +7,10 @@ Welcome to the central repository for my Selenium-based automation frameworks. T
 Each directory below contains a specialized framework designed for specific automation challenges.
 
 | Project Name | Framework Type | Key Technologies | Link |
-| --- | --- | --- | --- |
+| :--- | :--- | :--- | :--- |
+| **Hybrid Data-Driven** | Hybrid Framework | Selenium, Excel, MySQL | [View Project](./Hybrid_Data_Driven_Framework) |
+| **PyCalc-AutoFrame** | Page Object Model (POM) | Pytest, Selenium, MySQL | [View Project](./PyCalc-AutoFrame) |
 
-| **Hybrid Data-Driven** | Hybrid Framework | Selenium, Excel, MySQL | [View Project](https://github.com/Kunaljoshi12/Pytest-Selenium-Web-Framework/tree/main/Hybrid_Data_Driven_Framework) |
-| **PyCalc-AutoFrame** | Page Object Model (POM) | Pytest, Selenium, MySQL | [View Project](https://github.com/Kunaljoshi12/Pytest-Selenium-Web-Framework/tree/main/PyCalc-AutoFrame) |
 ---
 
 ## 🏗️ Core Architecture Overview
@@ -29,12 +29,7 @@ Most projects in this repository follow a standardized automation lifecycle to e
 To run any of the projects within this repository, ensure you have the following installed:
 
 * **Python:** 3.10 or higher
-* **Browser Driver:** [ChromeDriver](https://www.google.com/search?q=https://googlechromelabs.github.io/chrome-for-testing/) (matching your local Chrome version)
+* **Browser Driver:** [ChromeDriver](https://googlechromelabs.github.io/chrome-for-testing/) (matching your local Chrome version)
 * **Key Libraries:**
 ```bash
 pip install selenium pytest pytest-html mysql-connector-python openpyxl
-```
----
-## 📝 Author
-**Kunal Joshi** [GitHub Profile](https://www.google.com/search?q=https://github.com/Kunaljoshi12)
----
