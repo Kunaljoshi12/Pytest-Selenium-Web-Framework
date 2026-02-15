@@ -1,0 +1,6 @@
+# Ignore temporary Excel files
+~$*.xlsx
+~$*.xls
+
+# Optional: Ignore large data files if they exceed 100MB
+# data/large_dataset.csv
