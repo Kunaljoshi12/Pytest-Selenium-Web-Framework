@@ -10,7 +10,7 @@ Each directory below contains a specialized framework designed for specific auto
 | :--- | :--- | :--- | :--- |
 | **Hybrid Data-Driven** | Hybrid Framework | Selenium, Excel, MySQL | [View Project](./Hybrid_Data_Driven_Framework) |
 | **PyCalc-AutoFrame** | Page Object Model (POM) | Pytest, Selenium, MySQL | [View Project](./PyCalc-AutoFrame) |
-
+| **Add_Remove** | Page Object Model (POM) | Selenium, Pytest, Pytest-HTML | [View Project](https://github.com/Kunaljoshi12/Pytest-Selenium-Web-Framework/tree/main/Add_Remove) |
 ---
 
 ## 🏗️ Core Architecture Overview
